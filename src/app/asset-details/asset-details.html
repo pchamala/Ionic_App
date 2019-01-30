@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Asset Details
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item-group *ngFor="let asset of assets">
+            <ion-item-divider>
+                <ion-label>HE: {{asset.HE}}</ion-label>
+            </ion-item-divider>
+            <ion-item>
+                <ion-label>DA Price: {{asset.DAPrice}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label> DA Awards:{{asset.DAAwards}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>RT MW: {{asset.RTMW}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>RT Price: {{asset.RTPrice}}</ion-label>
+            </ion-item>
+        </ion-item-group>
+    </ion-list>
+
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-icon color="primary" name="locate" (click)="goMap()"></ion-icon>
+        <ion-icon color="primary" name="navigate" (click)="goToDirections()"></ion-icon>
+    </ion-toolbar>
+</ion-footer>
