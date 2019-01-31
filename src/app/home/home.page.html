@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -10,9 +10,18 @@
 </ion-header>
 
 <ion-content>
-  <button (click)="getGeoLocation()">Get GeoLocation</button>
-  <div *ngIf="location">
-    <h3>Latitude:{{location.lat}}</h3>
-    <h3>Longitude:{{location.lng}}</h3>
-  </div>
+  <ion-button (click)="getGeoLocation()">Where am I?</ion-button>
+  <agm-map *ngIf="location" [latitude]="location.lat" [longitude]="location.lng" [zoom]=10>
+    <agm-marker [latitude]="location.lat" [longitude]="location.lng">
+    </agm-marker>
+  </agm-map>
+  <ion-button (click)="takeAPic()">Take Picture</ion-button>
+  <ion-card *ngIf="imgSrc">
+    <img [src]="imgSrc">
+  </ion-card>
+  <ion-button (click)="picFromGallery()">Pick from Gallery</ion-button>
+  <ion-card *ngIf="galImgSrc">
+    <img [src]="galImgSrc">
+  </ion-card>
+  <ion-button (click)="scheduleNotification()">Notification</ion-button>
 </ion-content>
