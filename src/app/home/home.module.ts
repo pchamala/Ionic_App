@@ -11,7 +11,7 @@ import {AgmCoreModule} from '@agm/core';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,AgmCoreModule.forRoot({apiKey:'AIzaSyD_DBm-wqRQ3DFUh9711xBq9xK7EfK0Ros'}),
+    IonicModule,AgmCoreModule.forRoot({apiKey:'AIzaSyD_DBm-Q3DFUh9711xBq9xK7EfK0Ros'}),
     RouterModule.forChild([
       {
         path: '',

@@ -19,7 +19,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),AgmCoreModule.forRoot({apiKey:'AIzaSyD_DBm-wqRQ3DFUh9711xBq9xK7EfK0Ros'})
+    RouterModule.forChild(routes),AgmCoreModule.forRoot({apiKey:'AIzaSyBm-wqRQ3DFUh9711xBq9xK7EfK0Ros'})
   ],
   declarations: [MapPage]
 })
